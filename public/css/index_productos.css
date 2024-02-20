@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .catalogo {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nombre {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-list {
+  list-style: none;
+  padding: 0;
+}
+
+.page-list li {
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+}
+
+.page-list li.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos al final del contenedor */
+  padding: 10px; /* Agrega espacio alrededor de los botones de login */
+}
+
+.loginProductos,
+.loginGestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0e2b49;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 10px; /* Agrega espacio entre los botones de login */
+}
+
+/* Mueve el botón de loginGestion hacia la derecha */
+.loginGestion {
+  margin-left: auto;
+}
